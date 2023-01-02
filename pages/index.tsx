@@ -6,7 +6,7 @@ import Hero from '../components/Hero'
 
 export default function Home() {
   return (
-    <>
+    <div className="dark:bg-slate-900 dark:text-white h-screen">
       <Head>
         <title> Huzaifa's Portfolio </title>
         <meta name="description" content="Portfolio" />
@@ -30,6 +30,6 @@ export default function Home() {
       {/* <Projects /> */}
 
       {/* <ContactMe /> */}
-    </>
+    </div>
   )
 }
