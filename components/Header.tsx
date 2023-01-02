@@ -6,10 +6,6 @@ type Props = {}
 
 const Header = (props: Props) => {
 
-  if (document.body.classList.contains('dark')){
-    const dark = true
-  } else {const dark = false}
-  
   const toggleDark = () => {
     document.body.classList.toggle('dark')
   }
