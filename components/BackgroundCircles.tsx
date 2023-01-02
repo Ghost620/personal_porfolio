@@ -15,11 +15,11 @@ const BackgroundCircles = (props: Props) => {
         transition={{ duration: 2.5 }}  
         className='relative flex justify-center items-center'>
 
-        <div className='absolute border border-emerald-600 rounded-full h-[300px] w-[300px] mt-64 animate-ping' />
-        <div className='absolute border border-emerald-200 rounded-full h-[380px] w-[380px] mt-64 opacity-60' />
-        <div className='absolute border border-emerald-200 rounded-full h-[500px] w-[500px] mt-64 opacity-50' />
-        <div className='absolute border border-emerald-600 rounded-full h-[650px] w-[650px] mt-64 animate-pulse opacity-20' />
-        <div className='absolute border border-emerald-200 rounded-full h-[800px] w-[800px] mt-64 opacity-0 lg:opacity-10' />
+        <div className='absolute border border-emerald-600 rounded-full h-[170px] sm:h-[300px] w-[170px] sm:w-[300px] mt-32 sm:mt-64 animate-ping' />
+        <div className='absolute border border-emerald-200 rounded-full sm:h-[380px] sm:w-[380px] mt-32 sm:mt-64 opacity-120 dark:opacity-60' />
+        <div className='absolute border border-emerald-200 rounded-full h-[265px] sm:h-[500px] w-[265px] sm:w-[500px] mt-32 sm:mt-64 opacity:100 dark:opacity-50' />
+        <div className='absolute border border-emerald-600 rounded-full h-[330px] sm:h-[650px] w-[330px] sm:w-[650px] mt-32 sm:mt-64 animate-pulse opacity-40 dark:opacity-20' />
+        <div className='absolute border border-emerald-200 rounded-full lg:h-[800px] lg:w-[800px] mt-32 sm:mt-64 opacity-20 dark:opacity-10' />
 
     </motion.div>
   )
