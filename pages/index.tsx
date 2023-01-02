@@ -6,7 +6,7 @@ import Hero from '../components/Hero'
 
 export default function Home() {
   return (
-    <div className="dark:bg-slate-900 dark:text-white h-screen">
+    <div className="dark:bg-slate-900 dark:text-white h-screen snap-y snap-mandatory overflow-scroll z-0">
       <Head>
         <title> Huzaifa's Portfolio </title>
         <meta name="description" content="Portfolio" />
@@ -16,7 +16,7 @@ export default function Home() {
 
       <Header />
 
-      <section>
+      <section id='hero' className='snap-center'>
         <Hero />
       </section>
       {/* <Hero /> */}
