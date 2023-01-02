@@ -13,10 +13,10 @@ const Hero = (props: Props) => {
     })
 
   return (
-    <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
+    <div className='h-screen flex flex-col items-center last:space-y-0.25 justify-center text-center overflow-hidden'>
         <BackgroundCircles />
-        <img className='relative rounded-full h-60 w-60 mx-auto' src='https://cdn.pixabay.com/photo/2021/12/26/20/49/christmas-6895856__340.jpg' alt='' />
-        <h1>
+        <img className='relative rounded-full h-64 w-64 mx-auto object-cover' src='https://cdn.pixabay.com/photo/2021/12/26/20/49/christmas-6895856__340.jpg' alt='' />
+        <h1 className='mt-5'>
             <span> {text} </span>
             <Cursor cursorColor='dark-green' />
         </h1>
