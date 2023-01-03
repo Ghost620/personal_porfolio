@@ -17,7 +17,7 @@ const BackgroundCircles = (props: Props) => {
 
         <div className='absolute border border-emerald-600 rounded-full h-[170px] sm:h-[300px] w-[170px] sm:w-[300px] mt-60 sm:mt-80 animate-ping dark:opacity-50' />
         <div className='absolute border border-emerald-300 rounded-full sm:h-[380px] sm:w-[380px] mt-60 sm:mt-80 opacity-110 dark:opacity-30' />
-        <div className='absolute border border-emerald-200 rounded-full h-[265px] sm:h-[500px] w-[265px] sm:w-[500px] mt-60 sm:mt-80 opacity:100 dark:opacity-25' />
+        <div className='absolute border border-emerald-200 rounded-full h-[265px] sm:h-[500px] w-[265px] sm:w-[500px] mt-60 sm:mt-80 opacity:25 dark:opacity-10' />
         <div className='absolute border border-emerald-600 rounded-full h-[330px] sm:h-[650px] w-[330px] sm:w-[650px] mt-60 sm:mt-80 animate-pulse opacity-40 dark:opacity-20' />
         <div className='absolute border border-emerald-200 rounded-full lg:h-[800px] lg:w-[800px] mt-60 sm:mt-80 opacity-35 dark:opacity-10' />
 
