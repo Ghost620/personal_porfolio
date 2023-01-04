@@ -6,10 +6,11 @@ import Hero from '../components/Hero'
 import About from '../components/About'
 import Experience from '../components/Experience'
 import Skills from '../components/Skills'
+import Projects from '../components/Projects'
 
 export default function Home() {
   return (
-    <div className="dark:bg-slate-900 dark:text-white h-screen snap-y snap-mandatory overflow-scroll z-0">
+    <div className="dark:bg-slate-900 dark:text-white h-screen snap-y snap-mandatory overflow-y-scroll z-0">
       <Head>
         <title> Huzaifa's Portfolio </title>
         <meta name="description" content="Portfolio" />
@@ -35,7 +36,9 @@ export default function Home() {
         <Skills />
       </section>
 
-      {/* <Projects /> */}
+      <section id='projects' className='snap-start'>
+        <Projects />
+      </section>
 
       {/* <ContactMe /> */}
     </div>

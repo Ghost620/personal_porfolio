@@ -6,6 +6,7 @@ type Props = {}
 const ExperienceCard = (props: Props) => {
   return (
     <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[340px] md:w-[650px] xl:w-[875px] snap-center bg-teal-700 dark:bg-slate-800 text-slate-100 p-10 opacity-90 hover:opacity-100 dark:opacity-70 dark:hover:opacity-100 transition-opacity duration-200 overflow-hidden h-[400px] md:h-fit'>
+
         <motion.img initial={{ y: -100, opacity: 0 }} transition={{ duration: 1.2 }} whileInView={{ opacity: 1, y:0 }} viewport={{once: true}}
         className='w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-contain' src='https://www.profecialinks.com/img/logo-f.png' alt='' />
 
@@ -25,6 +26,7 @@ const ExperienceCard = (props: Props) => {
                 <li>B</li>
             </ul>
         </div>
+        
     </article>
   )
 }
