@@ -1,9 +1,20 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React, { useEffect } from "react";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 type Props = {}
 
 const Skills = (props: Props) => {
+
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+  
   const container = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
@@ -29,7 +40,7 @@ const Skills = (props: Props) => {
 
       <h3 className='absolute top-36 uppercase tracking-[3px] text-sm'> Hover over a skill for currency proficiency </h3>
 
-      <motion.div className='grid grid-cols-4 gap-5' variants={container} initial={"hidden"} animate={"visible"}>
+      <motion.div className='grid grid-cols-4 gap-5' variants={container} ref={ref} initial={"hidden"} animate={controls}>
 
         <motion.div className='group relative flex cursor-pointer' variants={item}>
 
