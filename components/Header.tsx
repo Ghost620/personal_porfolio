@@ -31,7 +31,7 @@ const Header = (props: Props) => {
           </button>
         </div>
 
-        <SocialIcon className='cursor-pointer color-green' network='email' fgColor='silver' bgColor='transparent' />
+        <SocialIcon className='cursor-pointer color-green' network='email' fgColor='silver' bgColor='transparent' href="#contactMe" type='link' />
         <p className='uppercase hidden md:inline-flex text-sm text-black dark:text-white'>
           Get In Touch
         </p>

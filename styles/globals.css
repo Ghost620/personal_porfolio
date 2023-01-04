@@ -6,4 +6,8 @@
     .heroButton {
         @apply px-6 py-2 dark:text-gray-500 border border-transparent rounded-full uppercase text-xs tracking-widest transition-all hover:border-green-900 dark:hover:text-white
     }
+
+    .contactInput {
+        @apply outline-none bg-teal-300/10 rounded-sm border-b px-6 py-4 border-teal-900 text-slate-300 placeholder-slate-600 dark:placeholder-slate-300/50 transition-all focus:border
+    }
 }
