@@ -6,11 +6,11 @@ type Props = {}
 const ContactMe = (props: Props) => {
   return (
     <div className='h-screen flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'>
-        <h3 className='absolute top-20 md:top-24 uppercase tracking-[20px] text-xl md:text-2xl'>Contact Me</h3>
+        <h3 className='absolute top-20 md:top-24 uppercase tracking-[20px] text-xl md:text-2xl'>Contact</h3>
 
         <div className='flex flex-col space-y-10'>
 
-            <h4 className='md:text-4xl font-semibold text-center mt-16 md:mt-0'>
+            <h4 className='md:text-4xl font-semibold text-center mt-16 md:mt-0 opacity-0 md:opacity-100'>
                 I've got just what you need. {" "}
                 <span className='underline decoration-green-900'>Let's talk</span> 
             </h4>
@@ -37,8 +37,8 @@ const ContactMe = (props: Props) => {
 
             <form className='flex flex-col space-y-2 w-fit mx-auto'>
                 <div className='flex space-x-2'>
-                    <input type="text" placeholder='Name' className='contactInput' /> 
-                    <input type="text" placeholder='Email' className='contactInput' />
+                    <input type="text" placeholder='Name' className='contactInput w-40 md:w-auto' /> 
+                    <input type="email" placeholder='Email' className='contactInput w-40 md:w-auto' />
                 </div>
 
                 <input type="text" placeholder='Subject' className='contactInput' />
