@@ -13,7 +13,7 @@ const Projects = (props: Props) => {
 
         <h3 className='absolute top-24 uppercase tracking-[20px] text-2xl'> Projects </h3>
 
-        <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-teal-800/20 scrollbar-thumb-teal-700' ref={contentWrapper} id='ui1' >
+        <div className='relative w-full scroll-smooth flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-teal-800/20 scrollbar-thumb-teal-700' ref={contentWrapper} id='ui1' >
             { projects.map((project, index) => (
                 <div key={`project-${index}`} className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'>
 
@@ -33,8 +33,8 @@ const Projects = (props: Props) => {
         </div>
 
         <div className='absolute px-20 w-full hidden md:flex justify-between z-30'>
-            <ArrowLeftCircleIcon className='h-12 animate[shake_0.82s_cubic-bezier(.36,.07,.19,.97)_both]' onClick={() => {contentWrapper.current.scrollLeft -= 1000}} />
-            <ArrowRightCircleIcon className='h-12 animate-bounce' onClick={() => {contentWrapper.current.scrollLeft += 1000}} />
+            <ArrowLeftCircleIcon className='h-12 animate-bounce' onClick={() => {contentWrapper.current.scrollLeft -= screen.width}} />
+            <ArrowRightCircleIcon className='h-12 animate-bounce' onClick={() => {contentWrapper.current.scrollLeft += screen.width}} />
         </div>
 
         <div className='w-full absolute top-[28%] bg-teal-700/70  dark:bg-teal-500/10 left-0 h-[400px] md:h-[550px] -skew-y-[11deg]' />
