@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
 import { MoonIcon, SunIcon } from '@heroicons/react/24/solid'
+import Link from 'next/link';
 
 type Props = {}
 
@@ -29,10 +30,12 @@ const Header = (props: Props) => {
 
         { isDark ? <SunIcon onClick={toggleDark} className='h-8' /> : <MoonIcon onClick={toggleDark} className='h-8' /> }
 
-        <SocialIcon className='cursor-pointer color-green' network='email' fgColor='silver' bgColor='transparent' href="#contactMe" type='link' />
-        <p className='uppercase hidden md:inline-flex text-sm text-black dark:text-white'>
-          Get In Touch
-        </p>
+        <Link href="#contactMe">
+          <SocialIcon className='cursor-pointer color-green' network='email' fgColor='silver' bgColor='transparent' href="#contactMe" type='link' />
+          <p className='uppercase hidden md:inline-flex text-sm text-black dark:text-white'>
+            Get In Touch
+          </p>
+        </Link>
       </motion.div>
 
     </header>

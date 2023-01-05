@@ -8,6 +8,7 @@ import Experience from '../components/Experience'
 import Skills from '../components/Skills'
 import Projects from '../components/Projects'
 import ContactMe from '../components/ContactMe'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -44,6 +45,14 @@ export default function Home() {
       <section id='contactMe' className='snap-start'>
         <ContactMe />
       </section>
+
+      <Link href="#hero">
+        <footer className='sticky bottom-5 w-full cursor-pointer'>
+          <div className='flex items-center justify-center'>
+            <img className='h-10 w-10 rounded-full filter grayscale hover:grayscale-0' src='https://cdn.pixabay.com/photo/2021/12/26/20/49/christmas-6895856__340.jpg' alt='' />
+          </div>
+        </footer>
+      </Link>
 
     </div>
   )
