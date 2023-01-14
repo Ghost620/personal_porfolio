@@ -4,11 +4,20 @@ const inter = Inter({ subsets: ['latin'] })
 import Header from '../components/Header'
 import Hero from '../components/Hero'
 import About from '../components/About'
-import Experience from '../components/Experience'
+import WorkExperience from '../components/WorkExperience'
 import Skills from '../components/Skills'
 import Projects from '../components/Projects'
 import ContactMe from '../components/ContactMe'
 import Link from 'next/link'
+import { PageInfo, Experience, Skill, Social, Project } from '../typings'
+
+type Props = {
+  pageInfo: PageInfo;
+  experience: Experience[];
+  skills: Skill[];
+  projects: Project[];
+  socials: Social[];
+}
 
 export default function Home() {
   return (
@@ -31,7 +40,7 @@ export default function Home() {
       </section>
 
       <section id='experience' className='snap-center'>
-        <Experience />
+        <WorkExperience />
       </section>
 
       <section id='skills' className='snap-start'>
@@ -57,3 +66,5 @@ export default function Home() {
     </div>
   )
 }
+
+
