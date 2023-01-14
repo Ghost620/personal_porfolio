@@ -1,10 +1,14 @@
 import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Skill } from "../typings";
+import { urlFor } from "../sanity";
 
-type Props = {}
+type Props = {
+  skills: Skill[]
+}
 
-const Skills = (props: Props) => {
+const Skills = ({skills}: Props) => {
 
   const controls = useAnimation();
   const [ref, inView] = useInView();
@@ -40,41 +44,26 @@ const Skills = (props: Props) => {
 
       <h3 className='absolute top-36 uppercase tracking-[3px] text-sm'> Hover over a skill for currency proficiency </h3>
 
-      <motion.div className='grid grid-cols-4 gap-5' variants={container} ref={ref} initial={"hidden"} animate={controls}>
+      <motion.div className='grid grid-cols-4 gap-5 mt-20 md:mt-0' variants={container} ref={ref} initial={"hidden"} animate={controls}>
 
-        <motion.div className='group relative flex cursor-pointer' variants={item}>
+        { skills?.map((skill) => (
 
-          <motion.img
-            className='rounded-full border border-green-700 object-contain h-16 w-16 md:h-28 md:w-28 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out bg-gray-100'
-            src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png' alt='' 
-          />
+          <motion.div className='group relative flex cursor-pointer' variants={item} key={skill._id}>
 
-          <div className='absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white h-16 w-16 md:h-28 md:w-28 xl:h-32 xl:w-32 rounded-full z-0'>
-
-            <div className='flex items-center justify-center h-full'>
-              <p className='text-3xl font-bold text-black'>75%</p>
+            <motion.img
+              className='rounded-full border border-green-700 object-contain h-16 w-16 md:h-28 md:w-28 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out bg-gray-100' src={urlFor(skill.image).url()} alt='' 
+            />
+  
+            <div className='absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white h-16 w-16 md:h-28 md:w-28 xl:h-32 xl:w-32 rounded-full z-0'>
+  
+              <div className='flex items-center justify-center h-full'>
+                <p className='text-3xl font-bold text-black'> {skill.progress}% </p>
+              </div>
+  
             </div>
-
-          </div>
-
-        </motion.div>
-
-        <motion.div className='group relative flex cursor-pointer' variants={item}>
-
-          <motion.img
-            className='rounded-full border border-green-700 object-contain h-16 w-16 md:h-28 md:w-28 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out bg-gray-100 dark:bg-gray-300'
-            src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/800px-Nextjs-logo.svg.png' alt='' 
-          />
-
-          <div className='absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white h-16 w-16 md:h-28 md:w-28 xl:h-32 xl:w-32 rounded-full z-0'>
-
-            <div className='flex items-center justify-center h-full'>
-              <p className='text-3xl font-bold text-black'>85%</p>
-            </div>
-
-          </div>
-
-        </motion.div>
+  
+          </motion.div>
+        )) }
 
       </motion.div>
         
