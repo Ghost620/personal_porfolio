@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import ExperienceCard from './ExperienceCard'
 import { Experience } from '../typings'
+import Link from 'next/link'
 
 type Props = {
   experiences: Experience[]
@@ -16,7 +17,7 @@ const WorkExperience = ({experiences}: Props) => {
         <div className='w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar-thin scrollbar-track-teal-800/20 scrollbar-thumb-teal-700'>
 
           { experiences.map(experience => (
-            <ExperienceCard key={experience._id} experience={experience} />
+            <Link href={experience.companyUrl} target="_blank"><ExperienceCard key={experience._id} experience={experience} /></Link>
           )) }
 
         </div>
