@@ -17,6 +17,7 @@ import { fetchSocials } from '../utils/fetchSocials'
 import { fetchSkills } from '../utils/fetchSkills'
 import { GetStaticProps } from 'next'
 import { urlFor } from '../sanity'
+import { useEffect } from 'react'
 
 type Props = {
   pageInfo: PageInfo;
@@ -27,6 +28,10 @@ type Props = {
 }
 
 export default function Home({ pageInfo, experiences, skills, projects, socials }: Props) {
+  useEffect(() => {
+    console.log('WELCOME');
+  }, []);
+
   return (
     <div className="dark:bg-slate-900 dark:text-white h-screen snap-y snap-mandatory overflow-y-scroll z-0 scrollbar-thin scrollbar-track-teal-800/20 scrollbar-thumb-teal-700">
       <Head>

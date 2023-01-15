@@ -1,3 +1,4 @@
 /node_modules
 /.next
 /sanity/node_modules
+.vercel
