@@ -16,6 +16,7 @@ import { fetchProjects } from '../utils/fetchProjects'
 import { fetchSocials } from '../utils/fetchSocials'
 import { fetchSkills } from '../utils/fetchSkills'
 import { GetStaticProps } from 'next'
+import { urlFor } from '../sanity'
 
 type Props = {
   pageInfo: PageInfo;
@@ -58,13 +59,13 @@ export default function Home({ pageInfo, experiences, skills, projects, socials 
       </section>
 
       <section id='contactMe' className='snap-start'>
-        <ContactMe />
+        <ContactMe pageInfo={pageInfo} />
       </section>
 
       <Link href="#hero">
         <footer className='sticky bottom-5 w-full cursor-pointer'>
           <div className='flex items-center justify-center'>
-            <img className='h-10 w-10 rounded-full filter grayscale hover:grayscale-0' src='https://cdn.pixabay.com/photo/2021/12/26/20/49/christmas-6895856__340.jpg' alt='' />
+            <img className='h-10 w-10 rounded-full filter grayscale hover:grayscale-0' src={urlFor(pageInfo.profilePic).url()} alt='' />
           </div>
         </footer>
       </Link>

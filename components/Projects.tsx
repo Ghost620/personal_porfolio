@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from '@heroicons/react/24/solid'
 import { Project } from '../typings'
 import { urlFor } from '../sanity'
+import Link from 'next/link'
 
 type Props = {
     projects: Project[]
@@ -20,7 +21,8 @@ const Projects = ({projects}: Props) => {
             { projects?.map((project, index) => (
                 <div key={project._id} className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'>
 
-                    <motion.img initial={{ y: -200, opacity:0 }} transition={{ duration: 1}} whileInView={{ opacity:1, y:0 }} viewport={{ once:true }} src={urlFor(project.image).url()} alt='' className='mt-28 md:mt-0 h-32 w-32 md:h-64 md:w-96 xl:h-[350px] xl:w-[550px] object-cover'/>
+                    
+                    <Link href={project.linkToBuild} target="_blank"> <motion.img initial={{ y: -200, opacity:0 }} transition={{ duration: 1}} whileInView={{ opacity:1, y:0 }} viewport={{ once:true }} src={urlFor(project.image).url()} alt='' className='mt-28 md:mt-0 h-32 w-32 md:h-64 md:w-96 xl:h-[350px] xl:w-[550px] object-cover'/> </Link>
 
                     <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
                         <h4 className='text-4xl font-semibold text-center'>
@@ -34,7 +36,7 @@ const Projects = ({projects}: Props) => {
                         </div>
 
                         <p className='text-sm md:text-lg text-center md:text-left justify-center'>
-                            {/* {project.summary} */}
+                            {project.summary}
                         </p>
                     </div>
 
