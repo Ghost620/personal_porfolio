@@ -11,7 +11,7 @@ type Props = {
 
 const Projects = ({projects}: Props) => {
 
-    const contentWrapper = useRef(null);
+    const contentWrapper = useRef(document.createElement("div"))
   return (
     <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} className='h-screen relative flex flex-col overflow-hidden text-left md:flex-row max-w-full justify-evenly items-center z-0' >
 
