@@ -17,6 +17,7 @@ import { fetchSocials } from '../utils/fetchSocials'
 import { fetchSkills } from '../utils/fetchSkills'
 import { GetStaticProps } from 'next'
 import { urlFor } from '../sanity'
+import dynamic from 'next/dynamic'
 
 type Props = {
   pageInfo: PageInfo;
@@ -26,7 +27,7 @@ type Props = {
   socials: Social[];
 }
 
-export default function Home({ pageInfo, experiences, skills, projects, socials }: Props) {
+function Home({ pageInfo, experiences, skills, projects, socials }: Props) {
   return (
     <div className="dark:bg-slate-900 dark:text-white h-screen snap-y snap-mandatory overflow-y-scroll z-0 scrollbar-thin scrollbar-track-teal-800/20 scrollbar-thumb-teal-700">
       <Head>
@@ -74,6 +75,7 @@ export default function Home({ pageInfo, experiences, skills, projects, socials 
   )
 }
 
+export default dynamic (() => Promise.resolve(Home), {ssr: false} )
 
 export const getStaticProps: GetStaticProps<Props> = async  () => {
   const pageInfo: PageInfo = await fetchPageInfos();
