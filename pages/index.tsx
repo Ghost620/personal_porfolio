@@ -30,7 +30,7 @@ export default function Home({ pageInfo, experiences, skills, projects, socials 
   return (
     <div className="dark:bg-slate-900 dark:text-white h-screen snap-y snap-mandatory overflow-y-scroll z-0 scrollbar-thin scrollbar-track-teal-800/20 scrollbar-thumb-teal-700">
       <Head>
-        <title> Huzaifa's Portfolio </title>
+        <title> Huzaifa&apos;s Portfolio </title>
         <meta name="description" content="Portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

@@ -27,8 +27,8 @@ const ContactMe = ({pageInfo}: Props) => {
         <div className='flex flex-col space-y-10'>
 
             <h4 className='md:text-4xl font-semibold text-center mt-16 md:mt-0 opacity-0 md:opacity-100'>
-                I've got just what you need. {" "}
-                <span className='underline decoration-green-900'>Let's talk</span> 
+                I&apos;ve got just what you need. {" "}
+                <span className='underline decoration-green-900'>Let&apos;s talk</span> 
             </h4>
 
             <div className='space-y-10'>
