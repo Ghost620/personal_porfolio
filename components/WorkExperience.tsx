@@ -16,8 +16,8 @@ const WorkExperience = ({experiences}: Props) => {
 
         <div className='w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar-thin scrollbar-track-teal-800/20 scrollbar-thumb-teal-700'>
 
-          { experiences.map(experience => (
-            <Link href={experience.companyUrl} target="_blank"><ExperienceCard key={experience._id} experience={experience} /></Link>
+          { experiences.map((experience, ind) => (
+            <Link href={experience.companyUrl} target="_blank"><ExperienceCard key={ind} experience={experience} /></Link>
           )) }
 
         </div>
