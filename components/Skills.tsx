@@ -44,7 +44,7 @@ const Skills = ({skills}: Props) => {
 
       <h3 className='absolute top-36 uppercase tracking-[3px] text-sm'> Hover over a skill for currency proficiency </h3>
 
-      <motion.div className='grid grid-cols-4 gap-5 mt-20 md:mt-0' variants={container} ref={ref} initial={"hidden"} animate={controls}>
+      <motion.div className='grid grid-cols-5 gap-5 mt-20 md:mt-0' variants={container} ref={ref} initial={"hidden"} animate={controls}>
 
         { skills?.map((skill) => (
 
